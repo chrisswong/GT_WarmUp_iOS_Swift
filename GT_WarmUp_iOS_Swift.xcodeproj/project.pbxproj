@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0D3DEE7D72006CDA3BA706BD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B581AB47D2D396F6198BB10E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		832BFF071ACBFE2D00038BBB /* WUXPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BFF061ACBFE2D00038BBB /* WUXPhoto.swift */; };
+		832BFF091ACBFE4A00038BBB /* WUXProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BFF081ACBFE4A00038BBB /* WUXProfile.swift */; };
+		832BFF0C1ACC000900038BBB /* WUXProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BFF0B1ACC000900038BBB /* WUXProfileViewController.swift */; };
+		832BFF0E1ACC04E600038BBB /* WUXApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BFF0D1ACC04E600038BBB /* WUXApiManager.swift */; };
 		838D69DB1ACBFA02007A0CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D69DA1ACBFA02007A0CAB /* AppDelegate.swift */; };
 		838D69DD1ACBFA02007A0CAB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D69DC1ACBFA02007A0CAB /* FirstViewController.swift */; };
 		838D69DF1ACBFA02007A0CAB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D69DE1ACBFA02007A0CAB /* SecondViewController.swift */; };
@@ -29,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		1EC1A136C03F85F4B2B10486 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		832BFF061ACBFE2D00038BBB /* WUXPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXPhoto.swift; path = Model/WUXPhoto.swift; sourceTree = "<group>"; };
+		832BFF081ACBFE4A00038BBB /* WUXProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXProfile.swift; path = Model/WUXProfile.swift; sourceTree = "<group>"; };
+		832BFF0B1ACC000900038BBB /* WUXProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXProfileViewController.swift; path = Profile/WUXProfileViewController.swift; sourceTree = "<group>"; };
+		832BFF0D1ACC04E600038BBB /* WUXApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXApiManager.swift; path = Managers/WUXApiManager.swift; sourceTree = "<group>"; };
 		838D69D51ACBFA02007A0CAB /* GT_WarmUp_iOS_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GT_WarmUp_iOS_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838D69D91ACBFA02007A0CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838D69DA1ACBFA02007A0CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +79,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		832BFEFE1ACBFCBD00038BBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				832BFF061ACBFE2D00038BBB /* WUXPhoto.swift */,
+				832BFF081ACBFE4A00038BBB /* WUXProfile.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		832BFF001ACBFCD100038BBB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				832BFF0D1ACC04E600038BBB /* WUXApiManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		832BFF011ACBFCE300038BBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		832BFF0A1ACBFFE700038BBB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				832BFF0B1ACC000900038BBB /* WUXProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		838D69CC1ACBFA02007A0CAB = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +134,10 @@
 		838D69D71ACBFA02007A0CAB /* GT_WarmUp_iOS_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				832BFF0A1ACBFFE700038BBB /* Profile */,
+				832BFF011ACBFCE300038BBB /* View */,
+				832BFF001ACBFCD100038BBB /* Manager */,
+				832BFEFE1ACBFCBD00038BBB /* Model */,
 				838D69DA1ACBFA02007A0CAB /* AppDelegate.swift */,
 				838D69DC1ACBFA02007A0CAB /* FirstViewController.swift */,
 				838D69DE1ACBFA02007A0CAB /* SecondViewController.swift */,
@@ -186,6 +230,7 @@
 		838D69CD1ACBFA02007A0CAB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WUX;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Green Tomato";
 				TargetAttributes = {
@@ -290,9 +335,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832BFF091ACBFE4A00038BBB /* WUXProfile.swift in Sources */,
 				838D69DF1ACBFA02007A0CAB /* SecondViewController.swift in Sources */,
+				832BFF0E1ACC04E600038BBB /* WUXApiManager.swift in Sources */,
 				838D69DB1ACBFA02007A0CAB /* AppDelegate.swift in Sources */,
+				832BFF0C1ACC000900038BBB /* WUXProfileViewController.swift in Sources */,
 				838D69DD1ACBFA02007A0CAB /* FirstViewController.swift in Sources */,
+				832BFF071ACBFE2D00038BBB /* WUXPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
