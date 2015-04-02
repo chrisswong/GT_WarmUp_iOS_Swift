@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WUXProfileViewController: UIViewController {
+class WUXProfileViewController: WUXBaseViewController {
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
@@ -31,14 +31,22 @@ class WUXProfileViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.spinner?.startAnimating()
         WUXApiManager.retrieveProfile { (error, response) -> (Void) in
             
+//            self.spinner?.stopAnimating()
             if error == nil {
                 if let profile = response as? WUXProfile {
                     self.currentProfile = profile
                 }
             } else {
                 
+                var alert = UIAlertController(title: "", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
+                var alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (alertAction) -> Void in
+                    
+                })
+                alert.addAction(alertAction)
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
     }
