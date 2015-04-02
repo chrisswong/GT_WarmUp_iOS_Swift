@@ -92,56 +92,30 @@ class WUXApiManager {
             .response { (request, response, data, error) in
                 var propertyListResponse: PropertyList?
                 
-                if data != nil {
-                    
-                    propertyListResponse = NSJSONSerialization.JSONObjectWithData(
-                        data as NSData,
-                        options: NSJSONReadingOptions.MutableLeaves,
-                        error: nil
-                    )
-                    //Currently handle one photo only
-                    if propertyListResponse != nil {
-                        
-                        if let photoDict = propertyListResponse as? NSDictionary {
-                            
-                            var photos = [WUXPhoto]()
-                            
-                            var photo:WUXPhoto = WUXPhoto()
-                            if let photoAlbumId = photoDict["albumId"] as? Int {
-                                photo.albumId = photoAlbumId
+                if let aData = data as? NSData
+                {
+                    if let aPropertyListResponse = NSJSONSerialization.JSONObjectWithData(aData, options: .allZeros, error: nil) as? [String: AnyObject]
+                    {
+                        var photos = [WUXPhoto]()
+                        for i in 0..<1 {
+                            if let photo = WUXPhoto(resultDict: aPropertyListResponse) {
+                                photos.append(photo)
                             }
-                            
-                            if let photoId = photoDict["id"] as? Int {
-                                photo.photoId = photoId
-                            }
-                            
-                            if let photoTitle = photoDict["title"] as? String {
-                                photo.photoTitle = photoTitle
-                            }
-                            
-                            if let photoUrlString = photoDict["url"] as? String {
-                                photo.photoUrlString = photoUrlString
-                            }
-                            
-                            if let photoThumbnailString = photoDict["thumbnailUrl"] as? String {
-                                photo.photoThumbnailUrlString = photoThumbnailString
-                            }
-                            
-                            photos.insert(photo, atIndex: 0)
-                            
-                            callback(nil,photos)
                         }
+                        
+                        println("\(photos.count)")
+                        callback(nil, photos)
                         
                     } else {
                         var errorDict = [NSLocalizedDescriptionKey:"JSON could not parse."]
                         var jsonCouldNotParseError = NSError(domain: "com.gtomato.enterprise.ios.GT-Warm-UP", code: 999, userInfo: errorDict)
+                        
                         callback(jsonCouldNotParseError , nil)
                     }
-                    
-                    
                 } else {
                     var errorDict = [NSLocalizedDescriptionKey:"Empty JSON Response"]
                     var jsonCouldNotParseError = NSError(domain: "com.gtomato.enterprise.ios.GT-Warm-UP", code: 998, userInfo: errorDict)
+                    
                     callback(jsonCouldNotParseError , nil)
                 }
         }
