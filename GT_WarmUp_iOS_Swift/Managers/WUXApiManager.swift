@@ -17,7 +17,7 @@ class WUXApiManager {
     
     class func retrieveProfile(callback: WUXAPICallback) {
         
-        Alamofire.request(.GET, "http://api.randomuser.me/")
+        Alamofire.request(.GET, Constants.APIPath.Profile)
             .response { (request, response, data, error) in
                 var propertyListResponse: PropertyList?
 
@@ -81,6 +81,64 @@ class WUXApiManager {
                     callback(jsonCouldNotParseError , nil)
                 }
         }
+    }
+    
+    class func retrievePhoto(callback: WUXAPICallback) {
+        
+        Alamofire.request(.GET, Constants.APIPath.Album)
+            .response { (request, response, data, error) in
+                var propertyListResponse: PropertyList?
+                
+                if data != nil {
+                    
+                    propertyListResponse = NSJSONSerialization.JSONObjectWithData(
+                        data as NSData,
+                        options: NSJSONReadingOptions.MutableLeaves,
+                        error: nil
+                    )
+                    //Currently handle one photo only
+                    if propertyListResponse != nil {
+                        
+                        if let photoDict = propertyListResponse as? NSDictionary {
+                            
+                            var photo:WUXPhoto = WUXPhoto()
+                            if let photoAlbumId = photoDict["albumId"] as? Int {
+                                photo.albumId = photoAlbumId
+                            }
+                            
+                            if let photoId = photoDict["id"] as? Int {
+                                photo.photoId = photoId
+                            }
+                            
+                            if let photoTitle = photoDict["title"] as? String {
+                                photo.photoTitle = photoTitle
+                            }
+                            
+                            if let photoUrlString = photoDict["url"] as? String {
+                                photo.photoUrlString = photoUrlString
+                            }
+                            
+                            if let photoThumbnailString = photoDict["thumbnailUrl"] as? String {
+                                photo.photoThumbnailUrlString = photoThumbnailString
+                            }
+                            
+                            callback(nil,photo)
+                        }
+                        
+                    } else {
+                        var errorDict = [NSLocalizedDescriptionKey:"JSON could not parse."]
+                        var jsonCouldNotParseError = NSError(domain: "com.gtomato.enterprise.ios.GT-Warm-UP", code: 999, userInfo: errorDict)
+                        callback(jsonCouldNotParseError , nil)
+                    }
+                    
+                    
+                } else {
+                    var errorDict = [NSLocalizedDescriptionKey:"Empty JSON Response"]
+                    var jsonCouldNotParseError = NSError(domain: "com.gtomato.enterprise.ios.GT-Warm-UP", code: 998, userInfo: errorDict)
+                    callback(jsonCouldNotParseError , nil)
+                }
+        }
+        
     }
     
     private func log(whatToLog: AnyObject) {

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0D3DEE7D72006CDA3BA706BD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B581AB47D2D396F6198BB10E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8328CA7F1ACD078E0063821B /* WUXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328CA7E1ACD078E0063821B /* WUXBaseViewController.swift */; };
+		8328CA821ACD134C0063821B /* WUXAlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328CA811ACD134C0063821B /* WUXAlbumCollectionViewController.swift */; };
+		8328CA851ACD138C0063821B /* WUXFavouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328CA841ACD138C0063821B /* WUXFavouriteTableViewController.swift */; };
+		8328CA881ACD13D00063821B /* WUXPhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328CA871ACD13D00063821B /* WUXPhotoDetailViewController.swift */; };
+		8328CA8A1ACD2A690063821B /* WUXAlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328CA891ACD2A690063821B /* WUXAlbumCollectionViewCell.swift */; };
+		8328CA8D1ACD2AB00063821B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328CA8C1ACD2AB00063821B /* Constants.swift */; };
+		8328CA8F1ACD370F0063821B /* WUXFavouriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328CA8E1ACD370F0063821B /* WUXFavouriteManager.swift */; };
 		832BFF071ACBFE2D00038BBB /* WUXPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BFF061ACBFE2D00038BBB /* WUXPhoto.swift */; };
 		832BFF091ACBFE4A00038BBB /* WUXProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BFF081ACBFE4A00038BBB /* WUXProfile.swift */; };
 		832BFF0C1ACC000900038BBB /* WUXProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BFF0B1ACC000900038BBB /* WUXProfileViewController.swift */; };
@@ -33,6 +39,12 @@
 /* Begin PBXFileReference section */
 		1EC1A136C03F85F4B2B10486 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8328CA7E1ACD078E0063821B /* WUXBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXBaseViewController.swift; path = Base/WUXBaseViewController.swift; sourceTree = "<group>"; };
+		8328CA811ACD134C0063821B /* WUXAlbumCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXAlbumCollectionViewController.swift; path = Album/WUXAlbumCollectionViewController.swift; sourceTree = "<group>"; };
+		8328CA841ACD138C0063821B /* WUXFavouriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXFavouriteTableViewController.swift; path = Favourite/WUXFavouriteTableViewController.swift; sourceTree = "<group>"; };
+		8328CA871ACD13D00063821B /* WUXPhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXPhotoDetailViewController.swift; path = "Photo Detail/WUXPhotoDetailViewController.swift"; sourceTree = "<group>"; };
+		8328CA891ACD2A690063821B /* WUXAlbumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXAlbumCollectionViewCell.swift; path = View/WUXAlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		8328CA8C1ACD2AB00063821B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Common/Constants.swift; sourceTree = "<group>"; };
+		8328CA8E1ACD370F0063821B /* WUXFavouriteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXFavouriteManager.swift; path = Managers/WUXFavouriteManager.swift; sourceTree = "<group>"; };
 		832BFF061ACBFE2D00038BBB /* WUXPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXPhoto.swift; path = Model/WUXPhoto.swift; sourceTree = "<group>"; };
 		832BFF081ACBFE4A00038BBB /* WUXProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXProfile.swift; path = Model/WUXProfile.swift; sourceTree = "<group>"; };
 		832BFF0B1ACC000900038BBB /* WUXProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXProfileViewController.swift; path = Profile/WUXProfileViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +97,38 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		8328CA801ACD132A0063821B /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				8328CA811ACD134C0063821B /* WUXAlbumCollectionViewController.swift */,
+			);
+			name = Album;
+			sourceTree = "<group>";
+		};
+		8328CA831ACD136B0063821B /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				8328CA841ACD138C0063821B /* WUXFavouriteTableViewController.swift */,
+			);
+			name = Favourite;
+			sourceTree = "<group>";
+		};
+		8328CA861ACD13A40063821B /* Photo Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8328CA871ACD13D00063821B /* WUXPhotoDetailViewController.swift */,
+			);
+			name = "Photo Detail";
+			sourceTree = "<group>";
+		};
+		8328CA8B1ACD2A8C0063821B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8328CA8C1ACD2AB00063821B /* Constants.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		832BFEFE1ACBFCBD00038BBB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				832BFF0D1ACC04E600038BBB /* WUXApiManager.swift */,
+				8328CA8E1ACD370F0063821B /* WUXFavouriteManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -105,6 +150,7 @@
 		832BFF011ACBFCE300038BBB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8328CA891ACD2A690063821B /* WUXAlbumCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -140,6 +186,10 @@
 		838D69D71ACBFA02007A0CAB /* GT_WarmUp_iOS_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				8328CA8B1ACD2A8C0063821B /* Common */,
+				8328CA861ACD13A40063821B /* Photo Detail */,
+				8328CA831ACD136B0063821B /* Favourite */,
+				8328CA801ACD132A0063821B /* Album */,
 				8328CA7D1ACD07730063821B /* Base */,
 				832BFF0A1ACBFFE700038BBB /* Profile */,
 				832BFF011ACBFCE300038BBB /* View */,
@@ -340,9 +390,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8328CA8F1ACD370F0063821B /* WUXFavouriteManager.swift in Sources */,
+				8328CA851ACD138C0063821B /* WUXFavouriteTableViewController.swift in Sources */,
+				8328CA8D1ACD2AB00063821B /* Constants.swift in Sources */,
 				832BFF091ACBFE4A00038BBB /* WUXProfile.swift in Sources */,
 				832BFF0E1ACC04E600038BBB /* WUXApiManager.swift in Sources */,
+				8328CA881ACD13D00063821B /* WUXPhotoDetailViewController.swift in Sources */,
+				8328CA8A1ACD2A690063821B /* WUXAlbumCollectionViewCell.swift in Sources */,
 				838D69DB1ACBFA02007A0CAB /* AppDelegate.swift in Sources */,
+				8328CA821ACD134C0063821B /* WUXAlbumCollectionViewController.swift in Sources */,
 				832BFF0C1ACC000900038BBB /* WUXProfileViewController.swift in Sources */,
 				8328CA7F1ACD078E0063821B /* WUXBaseViewController.swift in Sources */,
 				832BFF071ACBFE2D00038BBB /* WUXPhoto.swift in Sources */,

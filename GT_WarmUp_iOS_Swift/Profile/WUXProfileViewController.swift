@@ -68,7 +68,7 @@ class WUXProfileViewController: WUXBaseViewController {
             self.phoneNoLabel.text  = self.currentProfile?.phoneNo
             self.snsNoLabel.text    = self.currentProfile?.snsNo
             
-            //let's do it in native way.
+            //let's do it in a native way.
             let qos = Int(QOS_CLASS_USER_INITIATED.value)
             
             if let imageUrlString = self.currentProfile?.pictureUrlString {

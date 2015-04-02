@@ -51,8 +51,8 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgW-zd-RrV">
-                                        <rect key="frame" x="238" y="114" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgW-zd-RrV">
+                                        <rect key="frame" x="238" y="116" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -128,7 +128,7 @@
                             <constraint firstItem="YMS-Z6-dJg" firstAttribute="top" secondItem="AwO-t0-hRr" secondAttribute="bottom" id="lY4-Dg-rX8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="HWu-7g-7lt"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="HWu-7g-7lt"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="emailLabel" destination="u7R-5X-gI4" id="nJm-sB-oi6"/>
@@ -156,11 +156,132 @@
                     </tabBar>
                     <connections>
                         <segue destination="Ozt-hH-v3s" kind="relationship" relationship="viewControllers" id="ApI-h5-sAO"/>
+                        <segue destination="Kqo-ug-w99" kind="relationship" relationship="viewControllers" id="qwB-FK-XUA"/>
+                        <segue destination="V3R-wk-3hH" kind="relationship" relationship="viewControllers" id="2aK-h2-VC7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XiA-af-GUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="-1352"/>
+            <point key="canvasLocation" x="753" y="-729"/>
+        </scene>
+        <!--Album Collection View Controller-->
+        <scene sceneID="nZV-Dt-chD">
+            <objects>
+                <collectionViewController id="Kqo-ug-w99" customClass="WUXAlbumCollectionViewController" customModule="GT_WarmUp_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7U6-co-3Jj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wbo-k8-cfl">
+                            <size key="itemSize" width="150" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCollectionViewCellIdentifier" id="a2K-gg-9i4" customClass="WUXAlbumCollectionViewCell" customModule="GT_WarmUp_iOS_Swift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ko-bw-Zb3">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm1-8p-V6B">
+                                            <rect key="frame" x="120" y="120" width="22" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="22" id="YGm-fK-HHD"/>
+                                                <constraint firstAttribute="height" constant="22" id="hB0-px-Rp8"/>
+                                            </constraints>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="addButtonDidTap:" destination="a2K-gg-9i4" eventType="touchUpInside" id="EZK-50-ARO"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8ko-bw-Zb3" secondAttribute="bottom" id="HC7-5j-73E"/>
+                                    <constraint firstAttribute="trailing" secondItem="8ko-bw-Zb3" secondAttribute="trailing" id="HQb-Sz-tyG"/>
+                                    <constraint firstItem="8ko-bw-Zb3" firstAttribute="top" secondItem="a2K-gg-9i4" secondAttribute="top" id="WGs-yR-hSu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bm1-8p-V6B" secondAttribute="trailing" constant="8" id="aIM-ZV-1mG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bm1-8p-V6B" secondAttribute="bottom" constant="8" id="j2p-3K-iZp"/>
+                                    <constraint firstItem="8ko-bw-Zb3" firstAttribute="leading" secondItem="a2K-gg-9i4" secondAttribute="leading" id="scm-XT-KBZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="8ko-bw-Zb3" id="Kdr-d1-8ri"/>
+                                    <segue destination="R9l-Bl-cI3" kind="show" id="Kej-Jr-ZN4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Kqo-ug-w99" id="4Uz-q8-Fxh"/>
+                            <outlet property="delegate" destination="Kqo-ug-w99" id="22p-98-VCG"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="bL6-Bl-if3"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHj-QU-mwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="-729"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="da5-eu-aX2">
+            <objects>
+                <viewController id="R9l-Bl-cI3" customClass="WUXPhotoDetailViewController" customModule="GT_WarmUp_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9KO-TS-ahV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xwa-VZ-l0C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qCQ-Ue-fYv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xY-IB-5EX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="-729"/>
+        </scene>
+        <!--Favourite Table View Controller-->
+        <scene sceneID="GNK-IL-Ulu">
+            <objects>
+                <tableViewController id="V3R-wk-3hH" customClass="WUXFavouriteTableViewController" customModule="GT_WarmUp_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="11C-wc-aEM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FavouriteTableViewCellIdentifier" id="QiF-hF-I6H">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QiF-hF-I6H" id="uw7-PF-oeK">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="R9l-Bl-cI3" kind="show" id="MMe-lS-Chc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="V3R-wk-3hH" id="S3i-gk-dgh"/>
+                            <outlet property="delegate" destination="V3R-wk-3hH" id="C8g-gd-Cl9"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="5sY-7p-Woc"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFz-EW-SJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="-29"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kej-Jr-ZN4"/>
+    </inferredMetricsTieBreakers>
 </document>
