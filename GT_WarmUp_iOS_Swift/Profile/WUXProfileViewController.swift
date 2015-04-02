@@ -34,7 +34,7 @@ class WUXProfileViewController: WUXBaseViewController {
         self.spinner?.startAnimating()
         WUXApiManager.retrieveProfile { (error, response) -> (Void) in
             
-//            self.spinner?.stopAnimating()
+            self.spinner?.stopAnimating()
             if error == nil {
                 if let profile = response as? WUXProfile {
                     self.currentProfile = profile
