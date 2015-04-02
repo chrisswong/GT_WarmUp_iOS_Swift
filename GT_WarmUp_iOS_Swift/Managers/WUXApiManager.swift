@@ -13,6 +13,8 @@ class WUXApiManager {
     
     typealias WUXAPICallback = (NSError?, AnyObject?) -> (Void)
     
+    typealias WUXAPIPhotoListCallBack = (NSError?, [WUXPhoto]?) -> (Void)
+    
     typealias PropertyList = AnyObject
     
     class func retrieveProfile(callback: WUXAPICallback) {
@@ -83,7 +85,8 @@ class WUXApiManager {
         }
     }
     
-    class func retrievePhoto(callback: WUXAPICallback) {
+    class func retrievePhoto(callback: WUXAPIPhotoListCallBack) {
+        
         
         Alamofire.request(.GET, Constants.APIPath.Album)
             .response { (request, response, data, error) in
@@ -100,6 +103,8 @@ class WUXApiManager {
                     if propertyListResponse != nil {
                         
                         if let photoDict = propertyListResponse as? NSDictionary {
+                            
+                            var photos = [WUXPhoto]()
                             
                             var photo:WUXPhoto = WUXPhoto()
                             if let photoAlbumId = photoDict["albumId"] as? Int {
@@ -122,7 +127,9 @@ class WUXApiManager {
                                 photo.photoThumbnailUrlString = photoThumbnailString
                             }
                             
-                            callback(nil,[photo])
+                            photos.insert(photo, atIndex: 0)
+                            
+                            callback(nil,photos)
                         }
                         
                     } else {

@@ -30,10 +30,10 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
                 
                 if response != nil {
                     
-                    if let list = response as? [WUXPhoto] {
-                        self.photoList = list
-                        
-                    }
+                    self.photoList = response!
+//                    if let list = response as? [WUXPhoto] {
+//                        self.photoList.insert(list, atIndex: 0)
+//                    }
                 }
             } else {
                 self.showAlert(error?.localizedDescription)
