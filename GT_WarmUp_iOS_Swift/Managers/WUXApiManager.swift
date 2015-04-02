@@ -122,7 +122,7 @@ class WUXApiManager {
                                 photo.photoThumbnailUrlString = photoThumbnailString
                             }
                             
-                            callback(nil,photo)
+                            callback(nil,[photo])
                         }
                         
                     } else {

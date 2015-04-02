@@ -45,4 +45,13 @@ class WUXBaseViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
+    func showAlert(message: NSString?) {
+        var alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        var alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (alertAction) -> Void in
+            
+        })
+        alert.addAction(alertAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }

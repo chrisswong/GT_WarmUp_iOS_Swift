@@ -8,6 +8,17 @@
 
 import Foundation
 
+extension Array {
+    func find(includedElement: T -> Bool) -> Int? {
+        for (idx, element) in enumerate(self) {
+            if includedElement(element) {
+                return idx
+            }
+        }
+        return nil
+    }
+}
+
 class WUXFavouriteManager {
     
     class func addFavourite(photo: WUXPhoto) {
@@ -33,8 +44,13 @@ class WUXFavouriteManager {
         if list != nil {
             var tempList:[WUXPhoto] = list!
             
+            var index:Int? = tempList.find{ $0.photoId == photo.photoId }
             
-            WUXFavouriteManager.saveList(list!)
+            if index != nil {
+                tempList.removeAtIndex(index!)
+            }
+            
+            WUXFavouriteManager.saveList(tempList)
         }
 
         

@@ -8,14 +8,18 @@
 
 import UIKit
 
-class WUXAlbumCollectionViewController: UICollectionViewController {
+class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    var photoList:[WUXPhoto]? = nil
+    @IBOutlet weak var collectionView: UICollectionView!
+    var photoList:[WUXPhoto] = [WUXPhoto]() {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
+        fetchPhotos()
     }
     
     func fetchPhotos() {
@@ -24,40 +28,46 @@ class WUXAlbumCollectionViewController: UICollectionViewController {
             
             if error == nil {
                 
-                
+                if response != nil {
+                    
+                    if let list = response as? [WUXPhoto] {
+                        self.photoList = list
+                        
+                    }
+                }
+            } else {
+                self.showAlert(error?.localizedDescription)
             }
             
         }
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.photoList.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier(Constants.Storyboard.AlbumCollectionViewCellIdentifier, forIndexPath: indexPath) as WUXAlbumCollectionViewCell
         
-        if self.photoList != nil {
-            var list:[WUXPhoto] = self.photoList!
-            let photo = list[0]
-            cell.configureCell(photo, addButtonActionHandler: { (sender) -> (Void) in
-                var indexPath:NSIndexPath = collectionView.indexPathForCell(sender)!
-                
-            })
-        }
+        let photo = self.photoList[indexPath.row]
+        cell.configureCell(photo, addButtonActionHandler: { (sender) -> (Void) in
+            var indexPath:NSIndexPath = collectionView.indexPathForCell(sender)!
+            
+        })
         
         return cell
         
     }
     
     func handleFavourite(index: Int) {
-        if self.photoList != nil {
-            var list:[WUXPhoto] = self.photoList!
-            let photo = list[index]
-            
-            if photo.isFavourite {
-                 WUXFavouriteManager.removeFavourite(photo)
-            }
-            else {
-                 WUXFavouriteManager.addFavourite(photo)
-            }
+        let photo = self.photoList[index]
+        
+        if photo.isFavourite {
+             WUXFavouriteManager.removeFavourite(photo)
+        }
+        else {
+             WUXFavouriteManager.addFavourite(photo)
         }
     }
 }

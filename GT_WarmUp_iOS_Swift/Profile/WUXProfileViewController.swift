@@ -41,12 +41,8 @@ class WUXProfileViewController: WUXBaseViewController {
                 }
             } else {
                 
-                var alert = UIAlertController(title: "", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
-                var alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (alertAction) -> Void in
-                    
-                })
-                alert.addAction(alertAction)
-                self.presentViewController(alert, animated: true, completion: nil)
+                self.showAlert(error?.localizedDescription)
+
             }
         }
     }
