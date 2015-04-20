@@ -58,6 +58,7 @@
 		838D69EC1ACBFA02007A0CAB /* GT_WarmUp_iOS_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GT_WarmUp_iOS_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		838D69F11ACBFA02007A0CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838D69F21ACBFA02007A0CAB /* GT_WarmUp_iOS_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GT_WarmUp_iOS_SwiftTests.swift; sourceTree = "<group>"; };
+		83DFF99C1AE4EFEF00912841 /* GT_WarmUp_iOS_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GT_WarmUp_iOS_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		B581AB47D2D396F6198BB10E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17CD3D03D9116285023211F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8328CA8C1ACD2AB00063821B /* Constants.swift */,
+				83DFF99C1AE4EFEF00912841 /* GT_WarmUp_iOS_Swift-Bridging-Header.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -251,6 +253,7 @@
 				838D69D31ACBFA02007A0CAB /* Resources */,
 				68CD1BDA90825B52D5964FA9 /* Embed Pods Frameworks */,
 				5E9173B275367B5A7E47CDD7 /* Copy Pods Resources */,
+				83DFF9A01AE4F0A200912841 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -382,6 +385,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		83DFF9A01AE4F0A200912841 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -525,9 +541,12 @@
 			baseConfigurationReference = 1EC1A136C03F85F4B2B10486 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GT_WarmUp_iOS_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GT_WarmUp_iOS_Swift/GT_WarmUp_iOS_Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -536,9 +555,11 @@
 			baseConfigurationReference = C17CD3D03D9116285023211F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GT_WarmUp_iOS_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GT_WarmUp_iOS_Swift/GT_WarmUp_iOS_Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};

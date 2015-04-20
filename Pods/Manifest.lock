@@ -1,13 +1,26 @@
 PODS:
   - Alamofire (1.2.0)
+  - HockeySDK (3.6.2)
   - SwiftyJSON (2.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 1.1)
+  - HockeySDK (from `https://github.com/bitstadium/HockeySDK-iOS.git`, branch `develop`)
   - SwiftyJSON (>= 2.1.3)
+
+EXTERNAL SOURCES:
+  HockeySDK:
+    :branch: develop
+    :git: https://github.com/bitstadium/HockeySDK-iOS.git
+
+CHECKOUT OPTIONS:
+  HockeySDK:
+    :commit: e2d35454f9fddf6d37b437a0f4d00eaefc0d2b96
+    :git: https://github.com/bitstadium/HockeySDK-iOS.git
 
 SPEC CHECKSUMS:
   Alamofire: d765c5c1713aa64106b0228aaa600a1e6851f68d
+  HockeySDK: 51ade1aff04463137e852797d2eb4dfb2511d6a9
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
 
 COCOAPODS: 0.36.3
