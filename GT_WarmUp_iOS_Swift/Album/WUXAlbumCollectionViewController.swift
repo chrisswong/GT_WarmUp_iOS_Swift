@@ -17,6 +17,12 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.collectionView.layer.borderWidth = 1.0
+        self.collectionView.layer.borderColor = UIColor.redColor().CGColor
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         fetchPhotos()
@@ -31,6 +37,11 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
                 if response != nil {
                     
                     self.photoList = response!
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.collectionView.reloadData()
+                    }
+
 //                    if let list = response as? [WUXPhoto] {
 //                        self.photoList.insert(list, atIndex: 0)
 //                    }
