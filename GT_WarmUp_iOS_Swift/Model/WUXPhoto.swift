@@ -21,12 +21,12 @@ import Foundation
 
 class WUXPhoto {
     
-    let albumId:Int                     = 0
-    let photoId:Int                     = 0
-    let photoTitle:String               = ""
-    let photoUrlString:String           = ""
-    let photoThumbnailUrlString:String  = ""
-    let isFavourite:Bool                = false
+    var albumId:Int                     = 0
+    var photoId:Int                     = 0
+    var photoTitle:String               = ""
+    var photoUrlString:String           = ""
+    var photoThumbnailUrlString:String  = ""
+    var isFavourite:Bool                = false
     
     init?(resultDict: [String: AnyObject])
     {

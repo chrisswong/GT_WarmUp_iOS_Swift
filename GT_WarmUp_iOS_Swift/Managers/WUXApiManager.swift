@@ -25,7 +25,7 @@ class WUXApiManager {
 
                 if data != nil {
                     propertyListResponse = NSJSONSerialization.JSONObjectWithData(
-                        data as NSData,
+                        data as! NSData,
                         options: NSJSONReadingOptions.MutableLeaves,
                         error: nil
                     )

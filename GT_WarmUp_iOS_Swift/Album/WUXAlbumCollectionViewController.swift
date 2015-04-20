@@ -48,7 +48,7 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier(Constants.Storyboard.AlbumCollectionViewCellIdentifier, forIndexPath: indexPath) as WUXAlbumCollectionViewCell
+        let cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier(Constants.Storyboard.AlbumCollectionViewCellIdentifier, forIndexPath: indexPath) as! WUXAlbumCollectionViewCell
         
         let photo = self.photoList[indexPath.row]
         cell.configureCell(photo, addButtonActionHandler: { (sender) -> (Void) in

@@ -47,10 +47,8 @@ class WUXBaseViewController: UIViewController {
     }
     
     func showAlert(message: NSString?) {
-        var alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        var alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (alertAction) -> Void in
-            
-        })
+        var alert:UIAlertController = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        var alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil)
         alert.addAction(alertAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
