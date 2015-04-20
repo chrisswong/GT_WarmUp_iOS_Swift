@@ -205,6 +205,9 @@
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="addButtonDidTap:" destination="tDI-d6-QyV" eventType="touchUpInside" id="9Tw-gs-Ljs"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -274,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="2011" y="-723"/>
         </scene>
-        <!--Favourite Table View Controller-->
+        <!--Favourite-->
         <scene sceneID="GNK-IL-Ulu">
             <objects>
                 <tableViewController id="V3R-wk-3hH" customClass="WUXFavouriteTableViewController" customModule="GT_WarmUp_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -298,8 +301,11 @@
                             <outlet property="delegate" destination="V3R-wk-3hH" id="C8g-gd-Cl9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Rzl-Za-2Pd"/>
+                    <navigationItem key="navigationItem" title="Favourite" id="Rzl-Za-2Pd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="11C-wc-aEM" id="XLp-La-m1G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFz-EW-SJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -345,6 +351,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wQm-ex-m7S"/>
+        <segue reference="MMe-lS-Chc"/>
     </inferredMetricsTieBreakers>
 </document>

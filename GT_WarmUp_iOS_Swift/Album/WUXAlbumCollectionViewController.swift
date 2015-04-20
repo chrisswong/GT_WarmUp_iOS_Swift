@@ -19,8 +19,6 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView.layer.borderWidth = 1.0
-        self.collectionView.layer.borderColor = UIColor.redColor().CGColor
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -41,10 +39,6 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
                     dispatch_async(dispatch_get_main_queue()) {
                         self.collectionView.reloadData()
                     }
-
-//                    if let list = response as? [WUXPhoto] {
-//                        self.photoList.insert(list, atIndex: 0)
-//                    }
                 }
             } else {
                 self.showAlert(error?.localizedDescription)
@@ -62,9 +56,10 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
         let cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier(Constants.Storyboard.AlbumCollectionViewCellIdentifier, forIndexPath: indexPath) as! WUXAlbumCollectionViewCell
         
         let photo = self.photoList[indexPath.row]
+        weak var weakSelf = self
         cell.configureCell(photo, addButtonActionHandler: { (sender) -> (Void) in
             var indexPath:NSIndexPath = collectionView.indexPathForCell(sender)!
-            
+            weakSelf?.handleFavourite(indexPath.item)
         })
         
         return cell
