@@ -222,7 +222,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="fbh-c9-ieG" id="Xi5-FP-aXs"/>
-                                            <segue destination="R9l-Bl-cI3" kind="show" id="wQm-ex-m7S"/>
+                                            <segue destination="R9l-Bl-cI3" kind="show" identifier="AlbumShowDetailSegueIdentifier" id="wQm-ex-m7S"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -269,9 +269,50 @@
                     <view key="view" contentMode="scaleToFill" id="qCQ-Ue-fYv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="OeO-4E-5bV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTY-HN-QX2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fTY-HN-QX2" firstAttribute="height" secondItem="OeO-4E-5bV" secondAttribute="height" id="Ezk-hc-PCH"/>
+                                    <constraint firstAttribute="bottom" secondItem="fTY-HN-QX2" secondAttribute="bottom" id="LQ8-UJ-zAW"/>
+                                    <constraint firstAttribute="trailing" secondItem="fTY-HN-QX2" secondAttribute="trailing" id="LsS-ZB-i8b"/>
+                                    <constraint firstItem="fTY-HN-QX2" firstAttribute="top" secondItem="OeO-4E-5bV" secondAttribute="top" id="V2f-kH-7z5"/>
+                                    <constraint firstItem="fTY-HN-QX2" firstAttribute="leading" secondItem="OeO-4E-5bV" secondAttribute="leading" id="dFv-t1-4bc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="R9l-Bl-cI3" id="ohe-7c-XNI"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OeO-4E-5bV" firstAttribute="leading" secondItem="qCQ-Ue-fYv" secondAttribute="leadingMargin" constant="-16" id="29g-fe-PFS"/>
+                            <constraint firstItem="Xwa-VZ-l0C" firstAttribute="top" secondItem="OeO-4E-5bV" secondAttribute="bottom" id="2Iw-Cs-7sG"/>
+                            <constraint firstItem="OeO-4E-5bV" firstAttribute="top" secondItem="9KO-TS-ahV" secondAttribute="bottom" id="HJy-m3-Bwl"/>
+                            <constraint firstAttribute="trailing" secondItem="OeO-4E-5bV" secondAttribute="trailing" id="JA3-AG-inm"/>
+                            <constraint firstItem="OeO-4E-5bV" firstAttribute="leading" secondItem="qCQ-Ue-fYv" secondAttribute="leading" id="Uz1-pX-6AU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OeO-4E-5bV" secondAttribute="trailing" constant="-16" id="fWg-WC-CA3"/>
+                            <constraint firstItem="fTY-HN-QX2" firstAttribute="width" secondItem="qCQ-Ue-fYv" secondAttribute="width" id="gOQ-tx-jE4"/>
+                            <constraint firstItem="fTY-HN-QX2" firstAttribute="height" secondItem="qCQ-Ue-fYv" secondAttribute="height" id="ljT-BN-FeA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="29g-fe-PFS"/>
+                                <exclude reference="fWg-WC-CA3"/>
+                                <exclude reference="ljT-BN-FeA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="fTY-HN-QX2" id="VMm-U2-yHh"/>
+                        <outlet property="scrollView" destination="OeO-4E-5bV" id="F1x-A5-Kgj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xY-IB-5EX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -292,7 +333,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="R9l-Bl-cI3" kind="show" id="MMe-lS-Chc"/>
+                                    <segue destination="R9l-Bl-cI3" kind="show" identifier="FavouriteShowDetailSegueIdentifier" id="MMe-lS-Chc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
