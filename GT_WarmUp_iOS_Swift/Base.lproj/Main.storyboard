@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jxw-wr-z5S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jxw-wr-z5S">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -30,61 +30,61 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZW-wc-Y8q">
                                         <rect key="frame" x="8" y="116" width="96" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guj-a4-ggg">
                                         <rect key="frame" x="8" y="145" width="86" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone No :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4m-1g-Mlt">
                                         <rect key="frame" x="8" y="203" width="86" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SNS No :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPu-Wa-DNO">
                                         <rect key="frame" x="8" y="232" width="72" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgW-zd-RrV">
                                         <rect key="frame" x="238" y="116" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIZ-jK-j3G">
                                         <rect key="frame" x="238" y="145" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7R-5X-gI4">
                                         <rect key="frame" x="238" y="174" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoD-8t-JS5">
                                         <rect key="frame" x="238" y="203" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRM-si-bmc">
                                         <rect key="frame" x="238" y="233" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PT-W4-1YA">
                                         <rect key="frame" x="8" y="174" width="52" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -164,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="753" y="-729"/>
         </scene>
-        <!--Album Collection View Controller-->
+        <!--Album-->
         <scene sceneID="xpc-eH-KXd">
             <objects>
                 <viewController id="LZx-A1-BFB" customClass="WUXAlbumCollectionViewController" customModule="GT_WarmUp_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,6 +178,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N81-JE-T63">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gfn-iu-vpB">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -204,6 +205,9 @@
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="addButtonDidTap:" destination="tDI-d6-QyV" eventType="touchUpInside" id="9Tw-gs-Ljs"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -218,10 +222,14 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="fbh-c9-ieG" id="Xi5-FP-aXs"/>
-                                            <segue destination="R9l-Bl-cI3" kind="show" id="wQm-ex-m7S"/>
+                                            <segue destination="R9l-Bl-cI3" kind="show" identifier="AlbumShowDetailSegueIdentifier" id="wQm-ex-m7S"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="LZx-A1-BFB" id="U9s-nV-k6C"/>
+                                    <outlet property="delegate" destination="LZx-A1-BFB" id="sX4-fC-9XW"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -240,7 +248,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="C2g-o0-3RQ"/>
+                    <navigationItem key="navigationItem" title="Album" id="C2g-o0-3RQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectionView" destination="N81-JE-T63" id="gXT-0q-OR6"/>
@@ -261,15 +269,56 @@
                     <view key="view" contentMode="scaleToFill" id="qCQ-Ue-fYv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="OeO-4E-5bV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTY-HN-QX2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fTY-HN-QX2" firstAttribute="height" secondItem="OeO-4E-5bV" secondAttribute="height" id="Ezk-hc-PCH"/>
+                                    <constraint firstAttribute="bottom" secondItem="fTY-HN-QX2" secondAttribute="bottom" id="LQ8-UJ-zAW"/>
+                                    <constraint firstAttribute="trailing" secondItem="fTY-HN-QX2" secondAttribute="trailing" id="LsS-ZB-i8b"/>
+                                    <constraint firstItem="fTY-HN-QX2" firstAttribute="top" secondItem="OeO-4E-5bV" secondAttribute="top" id="V2f-kH-7z5"/>
+                                    <constraint firstItem="fTY-HN-QX2" firstAttribute="leading" secondItem="OeO-4E-5bV" secondAttribute="leading" id="dFv-t1-4bc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="R9l-Bl-cI3" id="ohe-7c-XNI"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OeO-4E-5bV" firstAttribute="leading" secondItem="qCQ-Ue-fYv" secondAttribute="leadingMargin" constant="-16" id="29g-fe-PFS"/>
+                            <constraint firstItem="Xwa-VZ-l0C" firstAttribute="top" secondItem="OeO-4E-5bV" secondAttribute="bottom" id="2Iw-Cs-7sG"/>
+                            <constraint firstItem="OeO-4E-5bV" firstAttribute="top" secondItem="9KO-TS-ahV" secondAttribute="bottom" id="HJy-m3-Bwl"/>
+                            <constraint firstAttribute="trailing" secondItem="OeO-4E-5bV" secondAttribute="trailing" id="JA3-AG-inm"/>
+                            <constraint firstItem="OeO-4E-5bV" firstAttribute="leading" secondItem="qCQ-Ue-fYv" secondAttribute="leading" id="Uz1-pX-6AU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OeO-4E-5bV" secondAttribute="trailing" constant="-16" id="fWg-WC-CA3"/>
+                            <constraint firstItem="fTY-HN-QX2" firstAttribute="width" secondItem="qCQ-Ue-fYv" secondAttribute="width" id="gOQ-tx-jE4"/>
+                            <constraint firstItem="fTY-HN-QX2" firstAttribute="height" secondItem="qCQ-Ue-fYv" secondAttribute="height" id="ljT-BN-FeA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="29g-fe-PFS"/>
+                                <exclude reference="fWg-WC-CA3"/>
+                                <exclude reference="ljT-BN-FeA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="fTY-HN-QX2" id="VMm-U2-yHh"/>
+                        <outlet property="scrollView" destination="OeO-4E-5bV" id="F1x-A5-Kgj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xY-IB-5EX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2011" y="-723"/>
         </scene>
-        <!--Favourite Table View Controller-->
+        <!--Favourite-->
         <scene sceneID="GNK-IL-Ulu">
             <objects>
                 <tableViewController id="V3R-wk-3hH" customClass="WUXFavouriteTableViewController" customModule="GT_WarmUp_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -284,7 +333,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="R9l-Bl-cI3" kind="show" id="MMe-lS-Chc"/>
+                                    <segue destination="R9l-Bl-cI3" kind="show" identifier="FavouriteShowDetailSegueIdentifier" id="MMe-lS-Chc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -293,8 +342,11 @@
                             <outlet property="delegate" destination="V3R-wk-3hH" id="C8g-gd-Cl9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Rzl-Za-2Pd"/>
+                    <navigationItem key="navigationItem" title="Favourite" id="Rzl-Za-2Pd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="11C-wc-aEM" id="XLp-La-m1G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFz-EW-SJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -340,6 +392,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wQm-ex-m7S"/>
+        <segue reference="MMe-lS-Chc"/>
     </inferredMetricsTieBreakers>
 </document>

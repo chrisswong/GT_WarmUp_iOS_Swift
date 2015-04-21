@@ -12,6 +12,8 @@ class Constants {
      struct Storyboard {
         static let AlbumCollectionViewCellIdentifier = "AlbumCollectionViewCellIdentifier"
         static let FavouriteTableViewCellIdentifier = "FavouriteTableViewCellIdentifier"
+        static let AlbumShowDetailSegueIdentifier = "AlbumShowDetailSegueIdentifier"
+        static let FavouriteShowDetailSegueIdentifier = "FavouriteShowDetailSegueIdentifier"
     }
     
     struct APIPath {

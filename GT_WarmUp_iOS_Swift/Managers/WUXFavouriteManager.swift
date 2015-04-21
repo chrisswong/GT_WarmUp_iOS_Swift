@@ -66,7 +66,11 @@ class WUXFavouriteManager {
     class func favouriteList() -> [WUXPhoto]? {
         let standardUserDefault = NSUserDefaults.standardUserDefaults()
         if let listData = standardUserDefault.objectForKey(Constants.Persistent.favouriteListUserDefaultKey) as? NSData {
-            return (NSKeyedUnarchiver.unarchiveObjectWithData(listData) as! [WUXPhoto])
+            
+            var list:[WUXPhoto] = (NSKeyedUnarchiver.unarchiveObjectWithData(listData) as! [WUXPhoto])
+            println("favouriteList count = \(list.count)")
+            return list
+            
         } else {
             return nil
         }
