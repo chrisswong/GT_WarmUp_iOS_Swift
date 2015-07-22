@@ -1,13 +1,16 @@
 PODS:
   - Alamofire (1.2.0)
+  - SVPullToRefresh (0.4.1)
   - SwiftyJSON (2.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 1.1)
+  - SVPullToRefresh
   - SwiftyJSON (>= 2.1.3)
 
 SPEC CHECKSUMS:
   Alamofire: d765c5c1713aa64106b0228aaa600a1e6851f68d
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.38.0.beta.2

@@ -21,7 +21,7 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
     }
     
     var startIndex: Int = 0
-    var pageSize: Int = 20
+    var pageSize: Int = 4
     
     //MARK: -
     //MARK: LifeCycle
@@ -33,6 +33,17 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         fetchPhotos()
+        
+        collectionView.addPullToRefreshWithActionHandler { [unowned self] in
+            self.startIndex = 0
+            self.pageSize = 4
+            self.photoList = []
+            self.fetchPhotos()
+        }
+        collectionView.addInfiniteScrollingWithActionHandler { [unowned self] in
+            self.startIndex += self.pageSize
+            self.fetchPhotos()
+        }
     }
     
     //MARK: -
@@ -89,10 +100,16 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
                 
                 if response != nil {
                     
-                    self.photoList = response!
+                    self.photoList += response!
                     
                     dispatch_async(dispatch_get_main_queue()) {
+                        
+                        self.collectionView.pullToRefreshView.stopAnimating()
+                        self.collectionView.infiniteScrollingView.stopAnimating()
+                        
                         self.collectionView.reloadData()
+                        
+
                     }
                 }
             } else {

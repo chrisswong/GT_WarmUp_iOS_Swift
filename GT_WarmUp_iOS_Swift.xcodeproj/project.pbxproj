@@ -49,6 +49,7 @@
 		832BFF081ACBFE4A00038BBB /* WUXProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXProfile.swift; path = Model/WUXProfile.swift; sourceTree = "<group>"; };
 		832BFF0B1ACC000900038BBB /* WUXProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXProfileViewController.swift; path = Profile/WUXProfileViewController.swift; sourceTree = "<group>"; };
 		832BFF0D1ACC04E600038BBB /* WUXApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WUXApiManager.swift; path = Managers/WUXApiManager.swift; sourceTree = "<group>"; };
+		835FA2831B5FA68E0046076F /* GT_WarmUp_iOS_Swift-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GT_WarmUp_iOS_Swift-BridgingHeader.h"; sourceTree = "<group>"; };
 		838D69D51ACBFA02007A0CAB /* GT_WarmUp_iOS_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GT_WarmUp_iOS_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838D69D91ACBFA02007A0CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838D69DA1ACBFA02007A0CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +203,7 @@
 				838D69E51ACBFA02007A0CAB /* LaunchScreen.xib */,
 				838D69D81ACBFA02007A0CAB /* Supporting Files */,
 				83E0E6AE1B5F91D60091785B /* MyPlayground.playground */,
+				835FA2831B5FA68E0046076F /* GT_WarmUp_iOS_Swift-BridgingHeader.h */,
 			);
 			path = GT_WarmUp_iOS_Swift;
 			sourceTree = "<group>";
@@ -530,6 +532,7 @@
 				INFOPLIST_FILE = GT_WarmUp_iOS_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/GT_WarmUp_iOS_Swift-BridgingHeader.h";
 			};
 			name = Debug;
 		};
@@ -541,6 +544,7 @@
 				INFOPLIST_FILE = GT_WarmUp_iOS_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/GT_WarmUp_iOS_Swift-BridgingHeader.h";
 			};
 			name = Release;
 		};
