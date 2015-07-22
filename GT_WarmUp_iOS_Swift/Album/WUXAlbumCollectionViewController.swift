@@ -20,6 +20,9 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
         }
     }
     
+    var startIndex: Int = 0
+    var pageSize: Int = 20
+    
     //MARK: -
     //MARK: LifeCycle
     
@@ -79,7 +82,8 @@ class WUXAlbumCollectionViewController: WUXBaseViewController, UICollectionViewD
     
     func fetchPhotos() {
         
-        WUXApiManager.retrievePhoto { (error, response) -> (Void) in
+        WUXApiManager.retrievePhoto(startIndex, pageSize: self.pageSize)
+            { (error, response) -> (Void) in
             
             if error == nil {
                 

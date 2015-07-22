@@ -71,24 +71,28 @@ class WUXApiManager {
                         }
                     } else {
                         
-                        var errorDict = [NSLocalizedDescriptionKey:"JSON could not parse."]
-                        var jsonCouldNotParseError = NSError(domain: "com.gtomato.enterprise.ios.GT-Warm-UP", code: 999, userInfo: errorDict)
-                        callback(jsonCouldNotParseError , nil)
+                        callback( self.error(999, description: "JSON could not parse.") , nil)
                     }
                     
                 } else {
-                    
-                    var errorDict = [NSLocalizedDescriptionKey:"Empty JSON Response"]
-                    var jsonCouldNotParseError = NSError(domain: "com.gtomato.enterprise.ios.GT-Warm-UP", code: 998, userInfo: errorDict)
-                    callback(jsonCouldNotParseError , nil)
+                    callback( self.error(998, description: "Empty JSON Response")  , nil)
                 }
         }
     }
     
-    class func retrievePhoto(callback: WUXAPIPhotoListCallBack) {
+    class func retrievePhoto(startIndex: Int, pageSize: Int,  callback: WUXAPIPhotoListCallBack) {
         
-        var path: String = Constants.albumPath(0, pageSize: 20)
-        print(path)
+        if (startIndex < 0 ) {
+            callback( self.error(997, description: "startIndex can not be negative") , nil)
+            return
+        }
+        
+        if (pageSize < 0 ){
+            callback( self.error(996, description: "pageSize can not be negative") , nil)
+            return
+        }
+        
+        var path: String = Constants.albumPath(startIndex, pageSize: pageSize)
         Alamofire.request(.GET, path )
             .response { (request, response, data, error) in
                 var propertyListResponse: PropertyList?
@@ -105,20 +109,16 @@ class WUXApiManager {
                             }
                         }
                         
-                        println("\(photos.count)")
                         callback(nil, photos)
                         
                     } else {
-                        var errorDict = [NSLocalizedDescriptionKey:"JSON could not parse."]
-                        var jsonCouldNotParseError = NSError(domain: "com.gtomato.enterprise.ios.GT-Warm-UP", code: 999, userInfo: errorDict)
                         
-                        callback(jsonCouldNotParseError , nil)
+                        callback( self.error(999, description: "JSON could not parse.") , nil)
                     }
                 } else {
-                    var errorDict = [NSLocalizedDescriptionKey:"Empty JSON Response"]
-                    var jsonCouldNotParseError = NSError(domain: "com.gtomato.enterprise.ios.GT-Warm-UP", code: 998, userInfo: errorDict)
                     
-                    callback(jsonCouldNotParseError , nil)
+                    callback( self.error(998, description: "Empty JSON Response")  , nil)
+                
                 }
         }
         
@@ -126,6 +126,12 @@ class WUXApiManager {
     
     private func log(whatToLog: AnyObject) {
         debugPrintln("TwitterRequest: \(whatToLog)")
+    }
+    
+    private class func error(errorCode :Int , description: String) -> NSError {
+        var errorDict = [NSLocalizedDescriptionKey: description]
+        let bundleId = NSBundle.mainBundle().infoDictionary?["CFBundleIdentifier"] as! String
+        return NSError(domain: bundleId, code: errorCode , userInfo: errorDict)
     }
 }
 
