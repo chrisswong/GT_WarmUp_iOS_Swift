@@ -87,8 +87,9 @@ class WUXApiManager {
     
     class func retrievePhoto(callback: WUXAPIPhotoListCallBack) {
         
+        var path: String = Constants.albumPath(0, pageSize: 20)
         
-        Alamofire.request(.GET, Constants.APIPath.Album)
+        Alamofire.request(.GET, path )
             .response { (request, response, data, error) in
                 var propertyListResponse: PropertyList?
                 

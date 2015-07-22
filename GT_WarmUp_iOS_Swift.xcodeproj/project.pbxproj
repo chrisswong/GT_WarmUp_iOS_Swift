@@ -58,6 +58,7 @@
 		838D69EC1ACBFA02007A0CAB /* GT_WarmUp_iOS_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GT_WarmUp_iOS_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		838D69F11ACBFA02007A0CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838D69F21ACBFA02007A0CAB /* GT_WarmUp_iOS_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GT_WarmUp_iOS_SwiftTests.swift; sourceTree = "<group>"; };
+		83E0E6AE1B5F91D60091785B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		B581AB47D2D396F6198BB10E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17CD3D03D9116285023211F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +201,7 @@
 				838D69E31ACBFA02007A0CAB /* Images.xcassets */,
 				838D69E51ACBFA02007A0CAB /* LaunchScreen.xib */,
 				838D69D81ACBFA02007A0CAB /* Supporting Files */,
+				83E0E6AE1B5F91D60091785B /* MyPlayground.playground */,
 			);
 			path = GT_WarmUp_iOS_Swift;
 			sourceTree = "<group>";

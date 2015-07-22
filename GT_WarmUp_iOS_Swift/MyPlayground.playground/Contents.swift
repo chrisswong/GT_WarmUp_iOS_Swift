@@ -1,12 +1,8 @@
-//
-//  Constants.swift
-//  GT_WarmUp_iOS_Swift
-//
-//  Created by Chris on 2/4/15.
-//  Copyright (c) 2015 Green Tomato. All rights reserved.
-//
+//: Playground - noun: a place where people can play
 
-import Foundation
+import UIKit
+
+var str = "Hello, playground"
 
 class Constants {
     struct Storyboard {
@@ -31,3 +27,5 @@ class Constants {
         return Constants.APIPath.AlbumPrefix + Constants.APIPath.StartIndexKey  + String(startIndex) + "&" + Constants.APIPath.PageSizeKey + String(pageSize)
     }
 }
+
+print(Constants.albumPath(0, pageSize: 20))
