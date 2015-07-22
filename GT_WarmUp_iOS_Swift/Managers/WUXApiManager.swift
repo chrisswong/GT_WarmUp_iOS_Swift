@@ -88,18 +88,19 @@ class WUXApiManager {
     class func retrievePhoto(callback: WUXAPIPhotoListCallBack) {
         
         var path: String = Constants.albumPath(0, pageSize: 20)
-        
+        print(path)
         Alamofire.request(.GET, path )
             .response { (request, response, data, error) in
                 var propertyListResponse: PropertyList?
                 
                 if let aData = data as? NSData
                 {
-                    if let aPropertyListResponse = NSJSONSerialization.JSONObjectWithData(aData, options: .allZeros, error: nil) as? [String: AnyObject]
+                    if let aPropertyListResponse = NSJSONSerialization.JSONObjectWithData(aData, options: .allZeros, error: nil) as? [[String: AnyObject]]
                     {
                         var photos = [WUXPhoto]()
-                        for i in 0..<1 {
-                            if let photo = WUXPhoto(resultDict: aPropertyListResponse) {
+                        for i in 0..<aPropertyListResponse.count {
+                            var dict = aPropertyListResponse[i]
+                            if let photo = WUXPhoto(resultDict: dict) {
                                 photos.append(photo)
                             }
                         }

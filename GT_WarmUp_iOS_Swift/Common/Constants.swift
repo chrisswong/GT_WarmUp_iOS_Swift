@@ -20,7 +20,7 @@ class Constants {
         static let Profile = "http://api.randomuser.me/"
         static let AlbumPrefix = "http://jsonplaceholder.typicode.com/photos?"
         static let StartIndexKey = "_start="
-        static let PageSizeKey = "_count="
+        static let PageSizeKey = "_limit="
     }
     
     struct Persistent {
